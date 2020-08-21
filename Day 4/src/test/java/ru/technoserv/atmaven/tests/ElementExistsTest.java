@@ -16,7 +16,7 @@ public class ElementExistsTest {
 
     @BeforeClass
     public void openSite() {
-        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Тестировщик/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Test/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(baseUrl);
     }
@@ -28,7 +28,6 @@ public class ElementExistsTest {
 
         try {
         WebElement notExistingElement = driver.findElement(By.name("noSuchName"));
-        // в норме, этот код не должен выполняться
         Assert.fail();
         }
         catch (NoSuchElementException e) {

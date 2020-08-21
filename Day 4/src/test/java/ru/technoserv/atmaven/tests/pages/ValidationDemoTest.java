@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class ValidationDemoTest {
     @Test
     public static void ValDemoTest() {
-        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Тестировщик/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Test/chromedriver.exe");
         String baseUrl = "http://demo.guru99.com/V1/index.php";
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, 20);

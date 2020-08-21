@@ -15,7 +15,7 @@ public class OpenSelenium {
 
         @BeforeClass
         public void openSite() {
-            System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Тестировщик/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Test/chromedriver.exe");
             driver = new ChromeDriver();
             driver.get(baseUrl);
         }

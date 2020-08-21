@@ -21,40 +21,32 @@ public class AlertDemoTest {
 
     @BeforeClass
     public void openSite() {
-        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Тестировщик/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Test/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(baseUrl);
 
     }
 
-    //public static void main(String[] args) throws NoAlertPresentException,InterruptedException  {
-
     @Test
     public void delCastTest() {
-        // Alert Message handling
         WebDriverWait wait = new WebDriverWait(driver, 20);
 
         driver.findElement(By.name("cusid")).sendKeys("53920");
         driver.findElement(By.name("submit")).click();
 
         wait.until(ExpectedConditions.alertIsPresent());
-        // Switching to Alert
+
         Alert alert = driver.switchTo().alert();
 
-        // Capturing alert message.
         String alertMessage = alert.getText();
-
-        // Displaying alert message
         System.out.println(alertMessage);
-        // Accepting alert
+
         alert.accept();
 
         wait.until(ExpectedConditions.alertIsPresent());
 
-        // Switching to Alert
         Alert alert2 = driver.switchTo().alert();
 
-        // Capturing alert message.
         String alertMessage2 = driver.switchTo().alert().getText();
         Assert.assertEquals(alertMessage2, "Customer Successfully Delete!");
         System.out.println(alertMessage2);

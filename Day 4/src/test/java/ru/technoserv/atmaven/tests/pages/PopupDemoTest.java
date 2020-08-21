@@ -20,17 +20,16 @@ public class PopupDemoTest {
 
     @BeforeClass
     public void openSite() {
-        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Тестировщик/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Test/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(baseUrl);
     }
 
-    //public static void main(String[] args) throws InterruptedException {
+
     @Test
     public void elementExists() {
         WebDriverWait wait = new WebDriverWait(driver, 20);
 
-        //Launching the site.
         driver.manage().window().maximize();
 
         driver.findElement(By.xpath("//*[contains(@href,'popup.php')]")).click();
@@ -38,14 +37,12 @@ public class PopupDemoTest {
         String mainWindow = driver.getWindowHandle();
         System.out.println("Main window handle = " + mainWindow);
 
-        // To handle all new opened window.
         Set<String> allWindows = driver.getWindowHandles();
 
         for (String childWindow : allWindows) {
 
             if (!mainWindow.equalsIgnoreCase(childWindow)) {
                 System.out.println("Child window handle = " + childWindow);
-                // Switching to Child window
                 driver.switchTo().window(childWindow);
                 driver.findElement(By.name("emailid")).sendKeys("gaurav.3n@gmail.com");
                 driver.findElement(By.name("btnLogin")).click();
@@ -61,11 +58,11 @@ public class PopupDemoTest {
                 System.out.println(userIdElement.getText());
                 System.out.println(passwordElement.getText());
 
-                // Closing the Child Window.
+
                 driver.close();
             }
         }
-        // Switching to Parent window i.e Main Window.
+
         driver.switchTo().window(mainWindow);
     }
     @AfterClass

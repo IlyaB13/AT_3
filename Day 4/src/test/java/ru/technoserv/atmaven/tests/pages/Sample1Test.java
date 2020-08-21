@@ -9,19 +9,14 @@ import org.testng.annotations.Test;
 public class Sample1Test {
     @Test
     public static void sam1Test() {
-        System.setProperty("webdriver.chrome.driver","C:/Users/User/Desktop/Тестировщик/chromedriver.exe");
-        //WebDriver safariDriver = new SafariDriver();
+        System.setProperty("webdriver.chrome.driver","C:/Users/User/Desktop/Test/chromedriver.exe");
+
         WebDriver chromeDriver = new ChromeDriver();
         try {
             String baseUrl = "http://demo.guru99.com/test/newtours/";
-
-            //safariDriver.get(baseUrl);
             chromeDriver.get(baseUrl);
-
-            //System.out.println("Safari title = " + safariDriver.getTitle());
             System.out.println("Chrome title = " + chromeDriver.getTitle());
         } finally {
-            //safariDriver.quit();
             chromeDriver.quit();
         }
     }

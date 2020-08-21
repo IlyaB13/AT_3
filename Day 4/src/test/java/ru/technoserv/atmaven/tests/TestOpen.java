@@ -15,7 +15,7 @@ public class TestOpen {
 
     @Test
     public void testOpen() {
-        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Тестировщик/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Test/chromedriver.exe");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver,10,0);
         driver.get("https://movavi.id/login");

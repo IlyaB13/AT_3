@@ -17,7 +17,7 @@ public class ValidationDemoTest {
 
     @Test
     public void RunTest() {
-        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Тестировщик/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Test/chromedriver.exe");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver,10,0);
 
@@ -33,26 +33,10 @@ public class ValidationDemoTest {
         checkStyleBeforeClicking(passwordValidationMessage);
 
 
-//        passwordControl.click();
-//        body.click();
-//        String expectedStyle = "visibility: visible;";
-//        String actualStyle = passwordValidationMessage.getAttribute("style");
-//        Assert.assertEquals(actualStyle, expectedStyle);
-//
-//
-//        usernameControl.click();
-//        body.click();
-//        String expectedStyle2 = "visibility: visible;";
-//        String actualStyle2 = userValidationMessage.getAttribute("style");
-//        Assert.assertEquals(actualStyle, expectedStyle);
-
-
-        // This is not working! See below
         checkStyleAfterClicking(passwordControl, passwordValidationMessage, body);
         checkStyleAfterClicking(usernameControl, userValidationMessage, body);
 
-//        checkStyleAfterClicking(passwordControl, passwordValidationMessage, usernameControl);
-//        checkStyleAfterClicking(usernameControl, userValidationMessage, passwordControl);
+
 
         checkStyleAfterFilling(usernameControl, userValidationMessage);
         checkStyleAfterFilling(passwordControl, passwordValidationMessage);

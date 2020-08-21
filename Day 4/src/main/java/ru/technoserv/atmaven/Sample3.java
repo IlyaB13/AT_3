@@ -11,7 +11,7 @@ import java.util.Date;
 
 public class Sample3 {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Тестировщик/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Test/chromedriver.exe");
         String baseUrl = "http://demo.guru99.com/test/upload/";
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, 20);

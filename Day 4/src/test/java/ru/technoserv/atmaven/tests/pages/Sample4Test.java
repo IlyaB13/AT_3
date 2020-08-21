@@ -10,7 +10,7 @@ import java.io.IOException;
 public class Sample4Test {
     @Test
     public static void Sam4Test() {
-        System.setProperty("webdriver.chrome.driver","/Users/User/Desktop/Тестировщик/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","//Users/User/Desktop/Test/chromedriver.exe");
 
         String baseUrl = "http://demo.guru99.com/test/yahoo.html";
         WebDriver driver = new ChromeDriver();
@@ -29,7 +29,6 @@ public class Sample4Test {
         } catch (InterruptedException | IOException ex) {
             System.out.println(ex.toString());
         } finally {
-            // remove file
             driver.quit();
         }
     }
