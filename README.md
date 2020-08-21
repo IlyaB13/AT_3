@@ -1,7 +1,11 @@
 AT_3
+<<<<<<< HEAD
 <<<<<<< fa4d64eb676e6475935513d109b97eff145ae528
 =======
 Day1 - Day1 + instr - Решение заданий
+=======
+Day1 - Решение заданий
+>>>>>>> master
 
 
 0. Создать публичный репозиторий в github, там создать директорию day1 и выложить туда ответы на задания.
@@ -40,4 +44,7 @@ Day 5 - решение заданий
 https://rapidapi.com/wirefreethought/api/geodb-cities/endpoints
 Тестируем это API. По одному кейсу на  эндпоинты Locales, Currencies, TimeZones, Cities, Countries.
 
+<<<<<<< HEAD
 >>>>>>> Day1 + instr
+=======
+>>>>>>> master
